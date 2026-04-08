@@ -1,0 +1,14 @@
+# FinFresh – Robots.txt
+# Strona: https://fin-fresh.pl
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://fin-fresh.pl/sitemap.xml
+
+# Blokuj dostęp do zasobów nie przeznaczonych do indeksacji
+Disallow: /login
+Disallow: /panel
+Disallow: /api/
+Disallow: /admin/
