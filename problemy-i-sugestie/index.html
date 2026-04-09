@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KG5C8TT8');</script>
+<!-- End Google Tag Manager -->
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
@@ -82,8 +89,8 @@
         m[i].l=1*new Date();
         for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
         k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=108448139', 'ym');
-    ym(108448139, 'init', {
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=108464041', 'ym');
+    ym(108464041, 'init', {
       ssr:              true,
       webvisor:         true,
       clickmap:         true,
@@ -94,16 +101,20 @@
       trackLinks:       true
     });
   </script>
-  <noscript><div><img src="https://mc.yandex.ru/watch/108448139" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <noscript><div><img src="https://mc.yandex.ru/watch/108464041" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
   <!-- ═══ /Yandex.Metrika counter ═══ -->
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KG5C8TT8"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <!-- ═══════════════ HEADER ═══════════════ -->
 <header>
   <div class="header__top">
     <div class="container">
-      <a href="/login" class="enter-account">
+      <a href="/login" class="enter-account" onclick="dataLayer.push({'event':'link_click','gtm_label':'header_login'});">
         <img src="/img/login.svg" alt="Zaloguj się"/>
         Zaloguj się
       </a>
@@ -111,18 +122,18 @@
   </div>
   <div class="header__bottom">
     <div class="container">
-      <a href="/" class="logo">
+      <a href="/" class="logo" onclick="dataLayer.push({'event':'link_click','gtm_label':'header_logo'});">
         <img src="/img/header_logo.svg" alt="FinFresh – pożyczki pod zastaw kryptowaluty"/>
       </a>
       <nav class="header__nav" aria-label="Nawigacja główna">
         <ul>
-          <li><a href="/jak-to-dziala"><img src="/img/settings.svg" alt=""/>Jak to działa</a></li>
-          <li><a href="/regulamin"><img src="/img/bookmark_add.svg" alt=""/>Regulamin</a></li>
-          <li><a href="/faq"><img src="/img/bookmark_add.svg" alt=""/>FAQ</a></li>
+          <li><a href="/jak-to-dziala" onclick="dataLayer.push({'event':'link_click','gtm_label':'nav_how_it_works'});"><img src="/img/settings.svg" alt=""/>Jak to działa</a></li>
+          <li><a href="/regulamin" onclick="dataLayer.push({'event':'link_click','gtm_label':'nav_terms'});"><img src="/img/bookmark_add.svg" alt=""/>Regulamin</a></li>
+          <li><a href="/faq" onclick="dataLayer.push({'event':'link_click','gtm_label':'nav_faq'});"><img src="/img/bookmark_add.svg" alt=""/>FAQ</a></li>
         </ul>
       </nav>
       <!-- Burger button (mobile only) -->
-      <button class="burger-btn" id="burgerBtn" aria-label="Menu" aria-expanded="false">
+      <button class="burger-btn" id="burgerBtn" aria-label="Menu" aria-expanded="false" onclick="dataLayer.push({'event':'button_click','gtm_label':'header_mobile_menu'});">
         <span></span>
         <span></span>
         <span></span>
@@ -132,12 +143,12 @@
   <!-- Mobile dropdown nav -->
   <nav class="mobile-nav" id="mobileNav" aria-label="Nawigacja mobilna">
     <ul>
-      <li><a href="/jak-to-dziala"><img src="/img/settings.svg" alt=""/>Jak to działa</a></li>
-      <li><a href="/regulamin"><img src="/img/bookmark_add.svg" alt=""/>Regulamin</a></li>
-      <li><a href="/faq"><img src="/img/bookmark_add.svg" alt=""/>FAQ</a></li>
+      <li><a href="/jak-to-dziala" onclick="dataLayer.push({'event':'link_click','gtm_label':'nav_how_it_works'});"><img src="/img/settings.svg" alt=""/>Jak to działa</a></li>
+      <li><a href="/regulamin" onclick="dataLayer.push({'event':'link_click','gtm_label':'nav_terms'});"><img src="/img/bookmark_add.svg" alt=""/>Regulamin</a></li>
+      <li><a href="/faq" onclick="dataLayer.push({'event':'link_click','gtm_label':'nav_faq'});"><img src="/img/bookmark_add.svg" alt=""/>FAQ</a></li>
     </ul>
     <div class="mobile-login">
-      <a href="/login">
+      <a href="/login" onclick="dataLayer.push({'event':'link_click','gtm_label':'header_login'});">
         <img src="/img/login.svg" alt="" style="width:18px;height:18px;filter:brightness(0)invert(1);"/>
         Zaloguj się
       </a>
@@ -149,7 +160,7 @@
 <div class="page-hero">
   <div class="container">
     <nav class="breadcrumb" aria-label="Ścieżka nawigacji">
-      <span><a href="/">Strona główna</a></span>
+      <span><a href="/" onclick="dataLayer.push({'event':'link_click','gtm_label':'nav_home'});">Strona główna</a></span>
       <span>Problemy i sugestie</span>
     </nav>
     <h1>Problemy i sugestie</h1>
@@ -164,10 +175,10 @@
       <div class="form-row">
         <label class="form-label">Rodzaj zgłoszenia</label>
         <div class="ticket-type-grid">
-          <button type="button" class="ticket-type-btn" onclick="selectType(this,'problem')">🐛 Problem techniczny</button>
-          <button type="button" class="ticket-type-btn" onclick="selectType(this,'suggestion')">💡 Sugestia</button>
-          <button type="button" class="ticket-type-btn" onclick="selectType(this,'question')">❓ Pytanie ogólne</button>
-          <button type="button" class="ticket-type-btn" onclick="selectType(this,'other')">📋 Inne</button>
+          <button type="button" class="ticket-type-btn" onclick="selectType(this,'problem');dataLayer.push({'event':'button_click','gtm_label':'ticket_type_problem'});">🐛 Problem techniczny</button>
+          <button type="button" class="ticket-type-btn" onclick="selectType(this,'suggestion');dataLayer.push({'event':'button_click','gtm_label':'ticket_type_suggestion'});">💡 Sugestia</button>
+          <button type="button" class="ticket-type-btn" onclick="selectType(this,'question');dataLayer.push({'event':'button_click','gtm_label':'ticket_type_question'});">❓ Pytanie ogólne</button>
+          <button type="button" class="ticket-type-btn" onclick="selectType(this,'other');dataLayer.push({'event':'button_click','gtm_label':'ticket_type_other'});">📋 Inne</button>
         </div>
       </div>
       <div class="form-row">
@@ -182,7 +193,7 @@
         <label class="form-label" for="ticketMessage">Wiadomość</label>
         <textarea id="ticketMessage" class="form-control" rows="6" placeholder="Opisz szczegółowo swój problem lub sugestię..."></textarea>
       </div>
-      <button type="button" class="submit-btn" onclick="submitTicket()">Wyślij zgłoszenie</button>
+      <button type="button" class="submit-btn" onclick="submitTicket();dataLayer.push({'event':'button_click','gtm_label':'form_submit'});">Wyślij zgłoszenie</button>
     </div>
 
     <div class="success-box" id="successBox">
@@ -191,7 +202,7 @@
       <p style="font-size:15px;color:var(--muted);margin-bottom:24px">
         Dziękujemy za Twoją wiadomość. Odpowiemy na podany adres e-mail najszybciej jak to możliwe.
       </p>
-      <a href="/" class="btn-get">Wróć na stronę główną</a>
+      <a href="/" class="btn-get" onclick="dataLayer.push({'event':'link_click','gtm_label':'cta_button'});">Wróć na stronę główną</a>
     </div>
   </div>
 </section>
@@ -210,16 +221,16 @@
       <div class="footer-links">
         <h5>Szybkie linki</h5>
         <ul>
-          <li><a href="/jak-to-dziala">Jak to działa</a></li>
-          <li><a href="/regulamin">Regulamin</a></li>
-          <li><a href="/faq">FAQ</a></li>
+          <li><a href="/jak-to-dziala" onclick="dataLayer.push({'event':'link_click','gtm_label':'nav_how_it_works'});">Jak to działa</a></li>
+          <li><a href="/regulamin" onclick="dataLayer.push({'event':'link_click','gtm_label':'nav_terms'});">Regulamin</a></li>
+          <li><a href="/faq" onclick="dataLayer.push({'event':'link_click','gtm_label':'nav_faq'});">FAQ</a></li>
         </ul>
       </div>
       <div class="footer-contact">
         <h5>Kontakt</h5>
         <div class="phone">
           <img src="/img/call.svg" alt="Telefon"/>
-          <a href="tel:+48221234567" style="color:#fff;">+48 22 123 45 67</a>
+          <a href="tel:+48221234567" style="color:#fff;" onclick="dataLayer.push({'event':'link_click','gtm_label':'contact_phone'});">+48 22 123 45 67</a>
         </div>
         <div class="email">kontakt@fin-fresh.pl</div>
       </div>
@@ -227,7 +238,7 @@
     <div class="footer-legal">
       <p>Pełna nazwa: FinFresh Sp. z o.o. — Instytucja Pożyczkowa &nbsp;|&nbsp; NIP: 000-000-00-00 &nbsp;|&nbsp; KRS: 0000000000</p>
       <p>Adres siedziby: ul. Przykładowa 1, 00-001 Warszawa &nbsp;|&nbsp;
-        <a href="https://www.knf.gov.pl" target="_blank" rel="noopener">Oficjalna strona KNF</a>
+        <a href="https://www.knf.gov.pl" target="_blank" rel="noopener" onclick="dataLayer.push({'event':'link_click','gtm_label':'external_link'});">Oficjalna strona KNF</a>
       </p>
     </div>
   </div>
@@ -300,7 +311,7 @@ function submitTicket() {
             .replace(/^_|_$/g, '') || 'button_click';
         }
 
-        ym(108448139, 'reachGoal', goal);
+        ym(108464041, 'reachGoal', goal);
         // Для отладки раскомментируйте строку ниже:
         // console.log('[YM goal]', goal);
       }, false);

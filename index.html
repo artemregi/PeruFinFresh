@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="kk">
 <head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KG5C8TT8');</script>
+<!-- End Google Tag Manager -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -409,16 +416,20 @@
         m[i].l=1*new Date();
         for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
         k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=108448139', 'ym');
-    ym(108448139, 'init', {
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=108464041', 'ym');
+    ym(108464041, 'init', {
       ssr: true, webvisor: true, clickmap: true, ecommerce: "dataLayer",
       referrer: document.referrer, url: location.href,
       accurateTrackBounce: true, trackLinks: true
     });
   </script>
-  <noscript><div><img src="https://mc.yandex.ru/watch/108448139" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <noscript><div><img src="https://mc.yandex.ru/watch/108464041" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KG5C8TT8"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <!-- ═══════════════ HEADER ═══════════════ -->
 <header>
@@ -426,10 +437,10 @@
     <div class="container">
       <!-- Language switcher -->
       <div class="lang-switcher">
-        <button class="lang-btn active" data-lang-btn="es" onclick="setLang('es')">ESP</button>
-        <button class="lang-btn" data-lang-btn="en" onclick="setLang('en')">ENG</button>
+        <button class="lang-btn active" data-lang-btn="es" onclick="setLang('es');dataLayer.push({'event':'button_click','gtm_label':'lang_switch_es'});">ESP</button>
+        <button class="lang-btn" data-lang-btn="en" onclick="setLang('en');dataLayer.push({'event':'button_click','gtm_label':'lang_switch_en'});">ENG</button>
       </div>
-      <a href="#" class="enter-account" data-goal="header_login_click" onclick="openWaitlistModal();return false;">
+      <a href="#" class="enter-account" data-goal="header_login_click" onclick="openWaitlistModal();dataLayer.push({'event':'link_click','gtm_label':'header_login'});return false;">
         <img src="img/login.svg" data-i18n-aria="login_text" alt="Кіру" />
         <span data-i18n="login_text">Кабинетке кіру</span>
       </a>
@@ -437,32 +448,32 @@
   </div>
   <div class="header__bottom">
     <div class="container">
-      <a href="index.html" class="logo">
+      <a href="index.html" class="logo" onclick="dataLayer.push({'event':'link_click','gtm_label':'header_logo'});">
         <img src="img/header_logo.svg" data-i18n-aria="logo_alt" alt="FinFresh – криптовалюта кепілімен несие" />
       </a>
       <nav class="header__nav" aria-label="Навигация">
         <ul>
           <li>
-            <a href="kak-eto-rabotaet/index.html">
+            <a href="kak-eto-rabotaet/index.html" onclick="dataLayer.push({'event':'link_click','gtm_label':'nav_how_it_works'});">
               <img src="img/settings.svg" alt="" />
               <span data-i18n="nav_how">Қалай жұмыс істейді</span>
             </a>
           </li>
           <li>
-            <a href="usloviya/index.html">
+            <a href="usloviya/index.html" onclick="dataLayer.push({'event':'link_click','gtm_label':'nav_terms'});">
               <img src="img/bookmark_add.svg" alt="" />
               <span data-i18n="nav_terms">Шарт</span>
             </a>
           </li>
           <li>
-            <a href="faq/index.html">
+            <a href="faq/index.html" onclick="dataLayer.push({'event':'link_click','gtm_label':'nav_faq'});">
               <img src="img/bookmark_add.svg" alt="" />
               <span data-i18n="nav_faq">Сұрақ-жауап</span>
             </a>
           </li>
         </ul>
       </nav>
-      <button class="burger-btn" id="burgerBtn" aria-label="Menu" aria-expanded="false">
+      <button class="burger-btn" id="burgerBtn" aria-label="Menu" aria-expanded="false" onclick="dataLayer.push({'event':'button_click','gtm_label':'header_mobile_menu'});">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -470,19 +481,19 @@
   <!-- Mobile nav -->
   <nav class="mobile-nav" id="mobileNav" aria-label="Мобильді навигация">
     <ul>
-      <li><a href="kak-eto-rabotaet/index.html"><img src="img/settings.svg" alt="" /><span data-i18n="nav_how">Қалай жұмыс істейді</span></a></li>
-      <li><a href="usloviya/index.html"><img src="img/bookmark_add.svg" alt="" /><span data-i18n="nav_terms">Шарт</span></a></li>
-      <li><a href="faq/index.html"><img src="img/bookmark_add.svg" alt="" /><span data-i18n="nav_faq">Сұрақ-жауап</span></a></li>
+      <li><a href="kak-eto-rabotaet/index.html" onclick="dataLayer.push({'event':'link_click','gtm_label':'nav_how_it_works'});"><img src="img/settings.svg" alt="" /><span data-i18n="nav_how">Қалай жұмыс істейді</span></a></li>
+      <li><a href="usloviya/index.html" onclick="dataLayer.push({'event':'link_click','gtm_label':'nav_terms'});"><img src="img/bookmark_add.svg" alt="" /><span data-i18n="nav_terms">Шарт</span></a></li>
+      <li><a href="faq/index.html" onclick="dataLayer.push({'event':'link_click','gtm_label':'nav_faq'});"><img src="img/bookmark_add.svg" alt="" /><span data-i18n="nav_faq">Сұрақ-жауап</span></a></li>
     </ul>
     <div class="mobile-login">
-      <a href="#" onclick="openWaitlistModal();return false;">
+      <a href="#" onclick="openWaitlistModal();dataLayer.push({'event':'link_click','gtm_label':'link_anchor'});return false;">
         <img src="img/login.svg" alt="" style="width:18px;height:18px;filter:brightness(0)invert(1);" />
         <span data-i18n="login_text">Кабинетке кіру</span>
       </a>
     </div>
     <div class="mobile-lang">
-      <button class="lang-btn active" data-lang-btn="es" onclick="setLang('es')">ESP</button>
-      <button class="lang-btn" data-lang-btn="en" onclick="setLang('en')">ENG</button>
+      <button class="lang-btn active" data-lang-btn="es" onclick="setLang('es');dataLayer.push({'event':'button_click','gtm_label':'lang_switch_es'});">ESP</button>
+      <button class="lang-btn" data-lang-btn="en" onclick="setLang('en');dataLayer.push({'event':'button_click','gtm_label':'lang_switch_en'});">ENG</button>
     </div>
   </nav>
 </header>
@@ -556,7 +567,7 @@
           </div>
         </div>
 
-        <button class="btn-get" data-goal="cta_get_pesos" onclick="openWaitlistModal()">
+        <button class="btn-get" data-goal="cta_get_pesos" onclick="openWaitlistModal();dataLayer.push({'event':'button_click','gtm_label':'cta_get_pesos'});">
           <span data-i18n="calc_btn">Obtener pesos</span>
         </button>
         <div class="calc-note" data-i18n="calc_note">* Cálculo aproximado de garantía USDT</div>
@@ -675,7 +686,7 @@
     <div class="faq-list">
 
       <div class="faq-item">
-        <button class="faq-item__question" onclick="toggleFaq(this)">
+        <button class="faq-item__question" onclick="toggleFaq(this);dataLayer.push({'event':'button_click','gtm_label':'faq_toggle'});">
           <span data-i18n="faq1_q">Криптовалюта кепілімен несие дегеніміз не?</span>
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
@@ -683,7 +694,7 @@
       </div>
 
       <div class="faq-item">
-        <button class="faq-item__question" onclick="toggleFaq(this)">
+        <button class="faq-item__question" onclick="toggleFaq(this);dataLayer.push({'event':'button_click','gtm_label':'faq_toggle'});">
           <span data-i18n="faq2_q">Несиенің ең аз сомасы қандай?</span>
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
@@ -691,7 +702,7 @@
       </div>
 
       <div class="faq-item">
-        <button class="faq-item__question" onclick="toggleFaq(this)">
+        <button class="faq-item__question" onclick="toggleFaq(this);dataLayer.push({'event':'button_click','gtm_label':'faq_toggle'});">
           <span data-i18n="faq3_q">Несие қаншалай жылдам беріледі?</span>
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
@@ -699,7 +710,7 @@
       </div>
 
       <div class="faq-item">
-        <button class="faq-item__question" onclick="toggleFaq(this)">
+        <button class="faq-item__question" onclick="toggleFaq(this);dataLayer.push({'event':'button_click','gtm_label':'faq_toggle'});">
           <span data-i18n="faq4_q">Криптовалютамды сатуым керек пе?</span>
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
@@ -707,7 +718,7 @@
       </div>
 
       <div class="faq-item">
-        <button class="faq-item__question" onclick="toggleFaq(this)">
+        <button class="faq-item__question" onclick="toggleFaq(this);dataLayer.push({'event':'button_click','gtm_label':'faq_toggle'});">
           <span data-i18n="faq5_q">Несиені мерзімінен бұрын өтей аламын ба?</span>
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
@@ -715,7 +726,7 @@
       </div>
 
       <div class="faq-item">
-        <button class="faq-item__question" onclick="toggleFaq(this)">
+        <button class="faq-item__question" onclick="toggleFaq(this);dataLayer.push({'event':'button_click','gtm_label':'faq_toggle'});">
           <span data-i18n="faq6_q">Несие тарихы тексеріле ме?</span>
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
@@ -723,7 +734,7 @@
       </div>
 
       <div class="faq-item">
-        <button class="faq-item__question" onclick="toggleFaq(this)">
+        <button class="faq-item__question" onclick="toggleFaq(this);dataLayer.push({'event':'button_click','gtm_label':'faq_toggle'});">
           <span data-i18n="faq7_q">Тәуекелдер қандай?</span>
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
@@ -731,7 +742,7 @@
       </div>
 
       <div class="faq-item">
-        <button class="faq-item__question" onclick="toggleFaq(this)">
+        <button class="faq-item__question" onclick="toggleFaq(this);dataLayer.push({'event':'button_click','gtm_label':'faq_toggle'});">
           <span data-i18n="faq8_q">Басқа елден өтініш бере аламын ба?</span>
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
@@ -739,7 +750,7 @@
       </div>
 
       <div class="faq-item">
-        <button class="faq-item__question" onclick="toggleFaq(this)">
+        <button class="faq-item__question" onclick="toggleFaq(this);dataLayer.push({'event':'button_click','gtm_label':'faq_toggle'});">
           <span data-i18n="faq9_q">Несие өтелгеннен кейін не болады?</span>
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
@@ -764,7 +775,7 @@
              style="padding:14px 18px; border:1px solid var(--border); border-radius:10px; font-family:var(--font); font-size:14px; outline:none; width:100%;" />
       <textarea rows="5" data-i18n-ph="contact_msg" placeholder="Мәселеңізді немесе ұсынысыңызды сипаттаңыз..." required
                 style="padding:14px 18px; border:1px solid var(--border); border-radius:10px; font-family:var(--font); font-size:14px; outline:none; resize:vertical; width:100%;"></textarea>
-      <button type="submit" class="btn-get" data-goal="contact_form_submit" style="width:auto; align-self:flex-start; padding:14px 40px;">
+      <button type="submit" class="btn-get" data-goal="contact_form_submit" style="width:auto; align-self:flex-start; padding:14px 40px;" onclick="dataLayer.push({'event':'button_click','gtm_label':'contact_form_submit'});">
         <span data-i18n="contact_btn">Хабарлама жіберу</span>
       </button>
     </form>
@@ -784,17 +795,17 @@
       <div class="footer-links">
         <h5 data-i18n="footer_links_title">Жылдам сілтемелер</h5>
         <ul>
-          <li><a href="kak-eto-rabotaet/index.html" data-i18n="nav_how">Қалай жұмыс істейді</a></li>
-          <li><a href="usloviya/index.html" data-i18n="nav_terms">Шарт</a></li>
-          <li><a href="faq/index.html" data-i18n="nav_faq">Сұрақ-жауап</a></li>
-          <li><a href="kontakt/index.html" data-i18n="nav_contact">Байланыс</a></li>
+          <li><a href="kak-eto-rabotaet/index.html" data-i18n="nav_how" onclick="dataLayer.push({'event':'link_click','gtm_label':'nav_how_it_works'});">Қалай жұмыс істейді</a></li>
+          <li><a href="usloviya/index.html" data-i18n="nav_terms" onclick="dataLayer.push({'event':'link_click','gtm_label':'nav_terms'});">Шарт</a></li>
+          <li><a href="faq/index.html" data-i18n="nav_faq" onclick="dataLayer.push({'event':'link_click','gtm_label':'nav_faq'});">Сұрақ-жауап</a></li>
+          <li><a href="kontakt/index.html" data-i18n="nav_contact" onclick="dataLayer.push({'event':'link_click','gtm_label':'nav_contact'});">Байланыс</a></li>
         </ul>
       </div>
       <div class="footer-contact">
         <h5 data-i18n="footer_contact_title">Байланыс</h5>
         <div class="phone">
           <img src="img/call.svg" alt="" />
-          <a href="tel:+77000000000" style="color:#fff;">+7 (700) 000-00-00</a>
+          <a href="tel:+77000000000" style="color:#fff;" onclick="dataLayer.push({'event':'link_click','gtm_label':'contact_phone'});">+7 (700) 000-00-00</a>
         </div>
         <div class="email">info@fin-fresh.ar</div>
       </div>
@@ -811,7 +822,7 @@
 <!-- ═══════════════ WAITLIST MODAL ═══════════════ -->
 <div class="wl-overlay" id="waitlistModal" role="dialog" aria-modal="true" aria-labelledby="wlTitle">
   <div class="wl-card">
-    <button class="wl-close" onclick="closeWaitlistModal()" data-i18n-aria="wl_close_aria" aria-label="Жабу">✕</button>
+    <button class="wl-close" onclick="closeWaitlistModal();dataLayer.push({'event':'button_click','gtm_label':'modal_close'});" data-i18n-aria="wl_close_aria" aria-label="Жабу">✕</button>
 
     <div class="wl-badge">
       <div class="wl-badge-dot"></div>
@@ -850,7 +861,7 @@
              data-i18n-ph="wl_email_ph"
              placeholder="Email мекенжайыңыз"
              required autocomplete="email" />
-      <button type="submit" class="wl-btn" id="wlBtn" data-goal="waitlist_submit">
+      <button type="submit" class="wl-btn" id="wlBtn" data-goal="waitlist_submit" onclick="dataLayer.push({'event':'button_click','gtm_label':'waitlist_submit'});">
         <span data-i18n="wl_btn">Хабарлаңыз 🚀</span>
       </button>
     </form>
@@ -1389,7 +1400,7 @@ window.setLang = function(lang) {
           .trim().replace(/\s+/g,' ').slice(0, 60);
         goal = text.toLowerCase().replace(/[^a-z0-9а-яёқңүұіғш]+/gi, '_').replace(/^_|_$/g, '') || 'button_click';
       }
-      ym(108448139, 'reachGoal', goal);
+      ym(108464041, 'reachGoal', goal);
     }, false);
   })();
 </script>
