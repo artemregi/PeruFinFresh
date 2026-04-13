@@ -1310,7 +1310,7 @@ window.setLang = function(lang) {
 
     var amount = parseInt(aSlider.value);
     var term   = parseInt(tSlider.value);
-    var aMin = 50000, aMax = 5000000, tMin = 1, tMax = 30;
+    var aMin = 50000, aMax = 5000000, tMin = 1, tMax = 90;
 
     aSlider.style.setProperty('--val', ((amount - aMin) / (aMax - aMin) * 100).toFixed(1) + '%');
     tSlider.style.setProperty('--val', ((term - tMin)   / (tMax - tMin) * 100).toFixed(1) + '%');
