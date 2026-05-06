@@ -1,23 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-KG5C8TT8');</script>
-<!-- End Google Tag Manager -->
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-N1NQF87Z1D"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MBYTDG7WHK"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-N1NQF87Z1D');
-  gtag('config', 'G-Q0HXPW83G7');
+  gtag('config', 'G-MBYTDG7WHK');
 </script>
-<!-- End Google Analytics -->
+<!-- End Google tag -->
+
+
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="icon" href="/img/header_logo.svg" type="image/svg+xml"/>
@@ -178,20 +172,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <!-- /Yandex.Metrika counter -->
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KG5C8TT8"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+
 
 <!-- ═══════════════ HEADER ═══════════════ -->
 <header>
   <div class="header__top">
     <div class="container">
       <div class="lang-switcher">
-        <button class="lang-btn active" data-lang-btn="es" onclick="setLang('es');dataLayer.push({'event':'button_click','gtm_label':'lang_switch_es'});">ESP</button>
-        <button class="lang-btn" data-lang-btn="en" onclick="setLang('en');dataLayer.push({'event':'button_click','gtm_label':'lang_switch_en'});">ENG</button>
+        <button class="lang-btn active" data-lang-btn="es" onclick="setLang('es');gtag('event','click',{event_category:'button',event_label:'lang_switch_es'});">ESP</button>
+        <button class="lang-btn" data-lang-btn="en" onclick="setLang('en');gtag('event','click',{event_category:'button',event_label:'lang_switch_en'});">ENG</button>
       </div>
-      <a href="../login/index.html" class="enter-account" onclick="dataLayer.push({'event':'link_click','gtm_label':'header_login'});">
+      <a href="../login/index.html" class="enter-account" onclick="gtag('event','click',{event_category:'link',event_label:'header_login'});">
         <img src="../img/login.svg" alt=""/>
         <span data-i18n="login_text">Ingresar al panel</span>
       </a>
@@ -199,31 +190,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
   <div class="header__bottom">
     <div class="container">
-      <a href="../index.html" class="logo" onclick="dataLayer.push({'event':'link_click','gtm_label':'header_logo'});"><img src="../img/header_logo.svg" data-i18n-aria="logo_alt" alt="FinFresh"/></a>
+      <a href="../index.html" class="logo" onclick="gtag('event','click',{event_category:'link',event_label:'header_logo'});"><img src="../img/header_logo.svg" data-i18n-aria="logo_alt" alt="FinFresh"/></a>
       <nav class="header__nav">
         <ul>
-          <li><a href="../kak-eto-rabotaet/index.html" onclick="dataLayer.push({'event':'link_click','gtm_label':'nav_how_it_works'});"><img src="../img/settings.svg" alt=""/><span data-i18n="nav_how">Cómo funciona</span></a></li>
-          <li><a href="../usloviya/index.html" onclick="dataLayer.push({'event':'link_click','gtm_label':'nav_terms'});"><img src="../img/bookmark_add.svg" alt=""/><span data-i18n="nav_terms">Condiciones</span></a></li>
-          <li><a href="../faq/index.html" onclick="dataLayer.push({'event':'link_click','gtm_label':'nav_faq'});"><img src="../img/bookmark_add.svg" alt=""/><span data-i18n="nav_faq">Preguntas</span></a></li>
+          <li><a href="../kak-eto-rabotaet/index.html" onclick="gtag('event','click',{event_category:'link',event_label:'nav_how_it_works'});"><img src="../img/settings.svg" alt=""/><span data-i18n="nav_how">Cómo funciona</span></a></li>
+          <li><a href="../usloviya/index.html" onclick="gtag('event','click',{event_category:'link',event_label:'nav_terms'});"><img src="../img/bookmark_add.svg" alt=""/><span data-i18n="nav_terms">Condiciones</span></a></li>
+          <li><a href="../faq/index.html" onclick="gtag('event','click',{event_category:'link',event_label:'nav_faq'});"><img src="../img/bookmark_add.svg" alt=""/><span data-i18n="nav_faq">Preguntas</span></a></li>
         </ul>
       </nav>
-      <button class="burger-btn" id="burgerBtn" aria-label="Menu" aria-expanded="false" onclick="dataLayer.push({'event':'button_click','gtm_label':'header_mobile_menu'});">
+      <button class="burger-btn" id="burgerBtn" aria-label="Menu" aria-expanded="false" onclick="gtag('event','click',{event_category:'button',event_label:'header_mobile_menu'});">
         <span></span><span></span><span></span>
       </button>
     </div>
   </div>
   <nav class="mobile-nav" id="mobileNav">
     <ul>
-      <li><a href="../kak-eto-rabotaet/index.html" onclick="dataLayer.push({'event':'link_click','gtm_label':'nav_how_it_works'});"><img src="../img/settings.svg" alt=""/><span data-i18n="nav_how">Cómo funciona</span></a></li>
-      <li><a href="../usloviya/index.html" onclick="dataLayer.push({'event':'link_click','gtm_label':'nav_terms'});"><img src="../img/bookmark_add.svg" alt=""/><span data-i18n="nav_terms">Condiciones</span></a></li>
-      <li><a href="../faq/index.html" onclick="dataLayer.push({'event':'link_click','gtm_label':'nav_faq'});"><img src="../img/bookmark_add.svg" alt=""/><span data-i18n="nav_faq">Preguntas</span></a></li>
+      <li><a href="../kak-eto-rabotaet/index.html" onclick="gtag('event','click',{event_category:'link',event_label:'nav_how_it_works'});"><img src="../img/settings.svg" alt=""/><span data-i18n="nav_how">Cómo funciona</span></a></li>
+      <li><a href="../usloviya/index.html" onclick="gtag('event','click',{event_category:'link',event_label:'nav_terms'});"><img src="../img/bookmark_add.svg" alt=""/><span data-i18n="nav_terms">Condiciones</span></a></li>
+      <li><a href="../faq/index.html" onclick="gtag('event','click',{event_category:'link',event_label:'nav_faq'});"><img src="../img/bookmark_add.svg" alt=""/><span data-i18n="nav_faq">Preguntas</span></a></li>
     </ul>
     <div class="mobile-login">
-      <a href="../login/index.html" onclick="dataLayer.push({'event':'link_click','gtm_label':'header_login'});"><img src="../img/login.svg" alt="" style="width:18px;height:18px;filter:brightness(0)invert(1);"/><span data-i18n="login_text">Ingresar al panel</span></a>
+      <a href="../login/index.html" onclick="gtag('event','click',{event_category:'link',event_label:'header_login'});"><img src="../img/login.svg" alt="" style="width:18px;height:18px;filter:brightness(0)invert(1);"/><span data-i18n="login_text">Ingresar al panel</span></a>
     </div>
     <div class="mobile-lang">
-      <button class="lang-btn active" data-lang-btn="es" onclick="setLang('es');dataLayer.push({'event':'button_click','gtm_label':'lang_switch_es'});">ESP</button>
-      <button class="lang-btn" data-lang-btn="en" onclick="setLang('en');dataLayer.push({'event':'button_click','gtm_label':'lang_switch_en'});">ENG</button>
+      <button class="lang-btn active" data-lang-btn="es" onclick="setLang('es');gtag('event','click',{event_category:'button',event_label:'lang_switch_es'});">ESP</button>
+      <button class="lang-btn" data-lang-btn="en" onclick="setLang('en');gtag('event','click',{event_category:'button',event_label:'lang_switch_en'});">ENG</button>
     </div>
   </nav>
 </header>
@@ -232,7 +223,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="page-hero">
   <div class="container">
     <nav class="breadcrumb" aria-label="Breadcrumb">
-      <span><a href="../index.html" data-i18n="breadcrumb_home" onclick="dataLayer.push({'event':'link_click','gtm_label':'nav_home'});">Inicio</a></span>
+      <span><a href="../index.html" data-i18n="breadcrumb_home" onclick="gtag('event','click',{event_category:'link',event_label:'nav_home'});">Inicio</a></span>
       <span data-lang="es">Problemas y sugerencias</span>
       <span data-lang="en" style="display:none">Issues and suggestions</span>
     </nav>
@@ -259,19 +250,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <span data-lang="en" style="display:none">Type of inquiry</span>
         </label>
         <div class="ticket-type-grid">
-          <button type="button" class="ticket-type-btn" onclick="selectType(this,'problem');dataLayer.push({'event':'button_click','gtm_label':'ticket_type_problem'});">
+          <button type="button" class="ticket-type-btn" onclick="selectType(this,'problem');gtag('event','click',{event_category:'button',event_label:'ticket_type_problem'});">
             <span data-lang="es">🐛 Problema técnico</span>
             <span data-lang="en" style="display:none">🐛 Technical issue</span>
           </button>
-          <button type="button" class="ticket-type-btn" onclick="selectType(this,'suggestion');dataLayer.push({'event':'button_click','gtm_label':'ticket_type_suggestion'});">
+          <button type="button" class="ticket-type-btn" onclick="selectType(this,'suggestion');gtag('event','click',{event_category:'button',event_label:'ticket_type_suggestion'});">
             <span data-lang="es">💡 Sugerencia</span>
             <span data-lang="en" style="display:none">💡 Suggestion</span>
           </button>
-          <button type="button" class="ticket-type-btn" onclick="selectType(this,'question');dataLayer.push({'event':'button_click','gtm_label':'ticket_type_question'});">
+          <button type="button" class="ticket-type-btn" onclick="selectType(this,'question');gtag('event','click',{event_category:'button',event_label:'ticket_type_question'});">
             <span data-lang="es">❓ Pregunta general</span>
             <span data-lang="en" style="display:none">❓ General question</span>
           </button>
-          <button type="button" class="ticket-type-btn" onclick="selectType(this,'other');dataLayer.push({'event':'button_click','gtm_label':'ticket_type_other'});">
+          <button type="button" class="ticket-type-btn" onclick="selectType(this,'other');gtag('event','click',{event_category:'button',event_label:'ticket_type_other'});">
             <span data-lang="es">📋 Otro</span>
             <span data-lang="en" style="display:none">📋 Other</span>
           </button>
@@ -304,7 +295,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           data-ph-en="Describe your issue or suggestion in detail..."
           placeholder="Describí en detalle tu problema o sugerencia..."></textarea>
       </div>
-      <button type="button" class="submit-btn" onclick="submitTicket();dataLayer.push({'event':'button_click','gtm_label':'form_submit'});">
+      <button type="button" class="submit-btn" onclick="submitTicket();gtag('event','click',{event_category:'button',event_label:'form_submit'});">
         <span data-lang="es">Enviar consulta</span>
         <span data-lang="en" style="display:none">Send inquiry</span>
       </button>
@@ -324,7 +315,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           Thank you for your message. We will reply to the e-mail address provided as soon as possible.
         </p>
       </div>
-      <a href="../index.html" class="btn-get" onclick="dataLayer.push({'event':'link_click','gtm_label':'cta_button'});">
+      <a href="../index.html" class="btn-get" onclick="gtag('event','click',{event_category:'link',event_label:'cta_button'});">
         <span data-lang="es">Volver al inicio</span>
         <span data-lang="en" style="display:none">Back to home</span>
       </a>
@@ -343,17 +334,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="footer-links">
         <h5 data-i18n="footer_links_title">Enlaces rápidos</h5>
         <ul>
-          <li><a href="../kak-eto-rabotaet/index.html" data-i18n="nav_how" onclick="dataLayer.push({'event':'link_click','gtm_label':'nav_how_it_works'});">Cómo funciona</a></li>
-          <li><a href="../usloviya/index.html" data-i18n="nav_terms" onclick="dataLayer.push({'event':'link_click','gtm_label':'nav_terms'});">Condiciones</a></li>
-          <li><a href="../faq/index.html" data-i18n="nav_faq" onclick="dataLayer.push({'event':'link_click','gtm_label':'nav_faq'});">Preguntas</a></li>
-          <li><a href="../kontakt/index.html" data-i18n="nav_contact" onclick="dataLayer.push({'event':'link_click','gtm_label':'nav_contact'});">Contacto</a></li>
+          <li><a href="../kak-eto-rabotaet/index.html" data-i18n="nav_how" onclick="gtag('event','click',{event_category:'link',event_label:'nav_how_it_works'});">Cómo funciona</a></li>
+          <li><a href="../usloviya/index.html" data-i18n="nav_terms" onclick="gtag('event','click',{event_category:'link',event_label:'nav_terms'});">Condiciones</a></li>
+          <li><a href="../faq/index.html" data-i18n="nav_faq" onclick="gtag('event','click',{event_category:'link',event_label:'nav_faq'});">Preguntas</a></li>
+          <li><a href="../kontakt/index.html" data-i18n="nav_contact" onclick="gtag('event','click',{event_category:'link',event_label:'nav_contact'});">Contacto</a></li>
         </ul>
       </div>
       <div class="footer-contact">
         <h5 data-i18n="footer_contact_title">Contacto</h5>
         <div class="phone">
           <img src="../img/call.svg" alt=""/>
-          <a href="tel:+541100000000" style="color:#fff;" onclick="dataLayer.push({'event':'link_click','gtm_label':'contact_phone'});">+54 (11) 0000-0000</a>
+          <a href="tel:+541100000000" style="color:#fff;" onclick="gtag('event','click',{event_category:'link',event_label:'contact_phone'});">+54 (11) 0000-0000</a>
         </div>
         <div class="email">info@fin-fresh.ar</div>
       </div>
@@ -710,6 +701,7 @@ window.setLang = function(lang) {
     document.querySelectorAll('.ticket-type-btn').forEach(function(b) { b.classList.remove('selected'); });
     btn.classList.add('selected');
     selectedType = type;
+    gtag('event','ticket_type_select',{event_category:'form',event_label:'ticket_type_'+type});
   }
   function submitTicket() {
     var email   = document.getElementById('ticketEmail').value.trim();
@@ -724,6 +716,7 @@ window.setLang = function(lang) {
     }
     document.getElementById('ticketForm').style.display = 'none';
     document.getElementById('successBox').style.display = 'block';
+    gtag('event','ticket_submit',{event_category:'form',event_label:'ticket_form_success'});
     /* Re-apply lang to show correct success message */
     if (typeof window.setLang === 'function') window.setLang(window.currentLang);
   }
@@ -745,6 +738,35 @@ window.setLang = function(lang) {
       ym(108464041, 'reachGoal', goal);
     }, false);
   })();
+</script>
+
+<script>
+/* ── GA4: Scroll Depth Tracking ── */
+(function() {
+  var milestones = [25, 50, 75, 90];
+  var reached = {};
+  function getScrollPct() {
+    var el = document.documentElement;
+    var scrolled = el.scrollTop || document.body.scrollTop;
+    var total = el.scrollHeight - el.clientHeight;
+    return total > 0 ? Math.floor(scrolled / total * 100) : 0;
+  }
+  var ticking = false;
+  window.addEventListener('scroll', function() {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(function() {
+      var pct = getScrollPct();
+      milestones.forEach(function(m) {
+        if (!reached[m] && pct >= m) {
+          reached[m] = true;
+          gtag('event','scroll_depth',{event_category:'engagement',event_label:'scroll_'+m+'pct',value:m});
+        }
+      });
+      ticking = false;
+    });
+  }, {passive:true});
+})();
 </script>
 </body>
 </html>
