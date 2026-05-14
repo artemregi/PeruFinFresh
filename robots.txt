@@ -1,14 +1,4 @@
-# FinFresh – Robots.txt
-# Site: https://www.ff-lat.online
-
 User-agent: *
 Allow: /
 
-# Sitemap
 Sitemap: https://www.ff-lat.online/sitemap.xml
-
-# Block non-public resources
-Disallow: /login
-Disallow: /panel
-Disallow: /api/
-Disallow: /admin/
