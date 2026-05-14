@@ -17,8 +17,8 @@
   <link rel="icon" href="/img/header_logo.svg" type="image/svg+xml"/>
 
   <!-- ═══ SEO ═══ -->
-  <title>Préstamos con garantía cripto | Pesos online 24/7 | FinFresh</title>
-  <meta name="description" content="FinFresh – préstamos rápidos con garantía USDT. Bloqueá tu criptomoneda como respaldo y recibí desde 50.000 hasta 5.000.000 $ en tu tarjeta bancaria. Solicitud online en 1 minuto, decisión 24/7." />
+  <title>Préstamos en Argentina con garantía cripto | Pesos argentinos 24/7 | FinFresh</title>
+  <meta name="description" content="FinFresh – préstamos en Argentina con garantía USDT. Recibí pesos argentinos desde $50.000 hasta $5.000.000 en tu tarjeta bancaria. Servicio disponible en toda Argentina. Solicitud online en 1 minuto, decisión 24/7." />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="FinFresh LLC" />
 
@@ -31,8 +31,8 @@
   <!-- ═══ Open Graph ═══ -->
   <meta property="og:type"        content="website" />
   <meta property="og:url"         content="https://www.ff-lat.online/" />
-  <meta property="og:title"       content="Préstamos con garantía cripto | Pesos online 24/7 | FinFresh" />
-  <meta property="og:description" content="Préstamos rápidos con garantía USDT. De 50.000 a 5.000.000 $ a tu tarjeta bancaria. Sin vender cripto. Solicitud en 1 minuto." />
+  <meta property="og:title"       content="Préstamos en Argentina con garantía cripto | Pesos argentinos 24/7 | FinFresh" />
+  <meta property="og:description" content="Préstamos en Argentina con garantía USDT. De $50.000 a $5.000.000 en pesos argentinos a tu tarjeta. Sin vender cripto. Servicio disponible en toda Argentina." />
   <meta property="og:image"       content="https://www.ff-lat.online/img/og-image.png" />
   <meta property="og:locale"      content="es_AR" />
   <meta property="og:locale:alternate" content="en_US" />
@@ -40,8 +40,8 @@
 
   <!-- ═══ Twitter Card ═══ -->
   <meta name="twitter:card"        content="summary_large_image" />
-  <meta name="twitter:title"       content="Préstamos con garantía cripto | FinFresh" />
-  <meta name="twitter:description" content="Préstamos rápidos con garantía USDT. De 50.000 a 5.000.000 $ a tu tarjeta bancaria." />
+  <meta name="twitter:title"       content="Préstamos en Argentina con garantía cripto | FinFresh" />
+  <meta name="twitter:description" content="Préstamos en Argentina con garantía USDT. Pesos argentinos de $50.000 a $5.000.000 a tu tarjeta bancaria." />
   <meta name="twitter:image"       content="https://www.ff-lat.online/img/og-image.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -313,6 +313,15 @@
       font-size: 14px; line-height: 1.65; color: var(--muted); padding: 0 24px;
     }
     .faq-item.open .faq-item__answer { max-height: 400px; padding: 0 24px 20px; }
+
+    /* ── ARGENTINA TRUST STRIP ── */
+    .argentina-strip { background: var(--darkgreen); color: #fff; padding: 32px 0; }
+    .argentina-strip__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .argentina-strip__item { display: flex; align-items: flex-start; gap: 14px; }
+    .argentina-strip__item svg { flex-shrink: 0; opacity: .9; margin-top: 2px; }
+    .argentina-strip__item strong { display: block; font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+    .argentina-strip__item span { font-size: 12px; opacity: .8; line-height: 1.5; }
+    @media (max-width: 768px) { .argentina-strip__grid { grid-template-columns: 1fr; gap: 20px; } }
 
     /* ── HOW IT WORKS ── */
     .howitworks-section { padding: 60px 0; }
@@ -652,6 +661,35 @@
   </div>
 </section>
 
+<!-- ═══════════════ ARGENTINA TRUST STRIP ═══════════════ -->
+<section class="argentina-strip">
+  <div class="container">
+    <div class="argentina-strip__grid">
+      <div class="argentina-strip__item">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <div>
+          <strong data-i18n="arg_strip1_title">Servicio disponible en toda Argentina</strong>
+          <span data-i18n="arg_strip1_text">Buenos Aires, Córdoba, Rosario y todas las provincias</span>
+        </div>
+      </div>
+      <div class="argentina-strip__item">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+        <div>
+          <strong data-i18n="arg_strip2_title">Transferencia a tarjetas argentinas</strong>
+          <span data-i18n="arg_strip2_text">Pesos argentinos directo a tu tarjeta bancaria en minutos</span>
+        </div>
+      </div>
+      <div class="argentina-strip__item">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/></svg>
+        <div>
+          <strong data-i18n="arg_strip3_title">Cumplimos con la legislación argentina</strong>
+          <span data-i18n="arg_strip3_text">Actividad regulada conforme a las leyes de la República Argentina</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ═══════════════ HOW IT WORKS ═══════════════ -->
 <section class="howitworks-section" id="kak-eto-rabotaet">
   <div class="container">
@@ -922,6 +960,19 @@
         },
         "availability": "https://schema.org/InStock"
       }
+    },
+    {
+      "@type": "FinancialService",
+      "name": "FinFresh",
+      "url": "https://www.ff-lat.online/",
+      "areaServed": "Argentina",
+      "serviceType": "Préstamos con garantía cripto",
+      "provider": { "@id": "https://www.ff-lat.online/#organization" },
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://www.ff-lat.online/",
+        "availableLanguage": ["es", "en"]
+      }
     }
   ]
 }
@@ -1028,6 +1079,14 @@ window.I18N = {
     contact_msg:      'Describí tu problema o sugerencia...',
     contact_btn:      'Enviar mensaje',
     contact_sent:     'Enviado ✓',
+
+    /* Argentina trust strip */
+    arg_strip1_title: 'Servicio disponible en toda Argentina',
+    arg_strip1_text:  'Buenos Aires, Córdoba, Rosario y todas las provincias',
+    arg_strip2_title: 'Transferencia a tarjetas argentinas',
+    arg_strip2_text:  'Pesos argentinos directo a tu tarjeta bancaria en minutos',
+    arg_strip3_title: 'Cumplimos con la legislación argentina',
+    arg_strip3_text:  'Actividad regulada conforme a las leyes de la República Argentina',
 
     /* Footer */
     footer_about:        'FinFresh — empresa fintech moderna especializada en generación de leads y préstamos rápidos con garantía cripto (USDT). Ayudamos a las empresas a atraer leads de calidad en el sector de servicios financieros y criptomonedas.',
@@ -1151,6 +1210,14 @@ window.I18N = {
     contact_msg:      'Describe your issue or suggestion...',
     contact_btn:      'Send message',
     contact_sent:     'Sent ✓',
+
+    /* Argentina trust strip */
+    arg_strip1_title: 'Service available across Argentina',
+    arg_strip1_text:  'Buenos Aires, Córdoba, Rosario and all provinces',
+    arg_strip2_title: 'Transfer to Argentine bank cards',
+    arg_strip2_text:  'Argentine pesos directly to your bank card in minutes',
+    arg_strip3_title: 'We comply with Argentine law',
+    arg_strip3_text:  'Operations regulated under the laws of the Argentine Republic',
 
     /* Footer */
     footer_about:        'FinFresh — modern fintech company specialising in lead generation and fast crypto-backed loans (USDT). We help businesses attract quality leads in the financial services and cryptocurrency sector.',
