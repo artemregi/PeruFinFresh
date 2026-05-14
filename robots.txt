@@ -1,11 +1,11 @@
 # FinFresh – Robots.txt
-# Site: https://fin-fresh.ar
+# Site: https://www.ff-lat.online
 
 User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://fin-fresh.ar/sitemap.xml
+Sitemap: https://www.ff-lat.online/sitemap.xml
 
 # Block non-public resources
 Disallow: /login
