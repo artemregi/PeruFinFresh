@@ -214,6 +214,85 @@
     .btn-get:hover { background-color: #026d60; }
     .calc-note { font-size: 12px; color: var(--muted); margin-top: 10px; text-align: center; }
 
+    /* ── TOKEN SELECTOR ── */
+    .token-section-label { font-size: 13px; color: var(--muted); font-weight: 600; margin-bottom: 8px; margin-top: 4px; }
+    .collateral-hint { font-size: 13px; color: var(--muted); margin-bottom: 16px; margin-top: -4px; }
+    .collateral-hint strong { color: var(--green); font-weight: 800; font-size: 15px; }
+
+    .currency-row { display: flex; align-items: center; gap: 8px; margin-bottom: 18px; flex-wrap: nowrap; }
+    .quick-chips {
+      display: flex; gap: 6px; padding: 6px; background: var(--gray-bg);
+      border-radius: 999px; flex: 1 1 auto; min-width: 0; overflow: hidden;
+    }
+    .quick-chips button {
+      flex: 1 1 0; min-width: 0; border: 0; cursor: pointer; padding: 9px 10px;
+      border-radius: 999px; background: transparent; color: var(--muted);
+      font: 600 13px/1 var(--font); display: flex; align-items: center;
+      justify-content: center; gap: 6px; transition: background .18s, color .18s;
+      white-space: nowrap;
+    }
+    .quick-chips button:hover { color: var(--text); background: #e9f2ee; }
+    .coin-glyph {
+      width: 18px; height: 18px; border-radius: 50%; background: #fff;
+      color: var(--green); display: grid; place-items: center; font-weight: 800;
+      font-size: 10px; flex-shrink: 0;
+    }
+    .quick-chips button.selected-slot {
+      background: var(--green); color: #fff;
+      box-shadow: 0 6px 20px -4px rgba(2,142,127,.55);
+      pointer-events: none;
+    }
+    .quick-chips button.selected-slot .coin-glyph { background: rgba(255,255,255,.22); color: #fff; }
+    .quick-chips button.active { background: var(--green); color: #fff; box-shadow: 0 6px 14px -6px rgba(2,142,127,.5); }
+    .quick-chips button.active .coin-glyph { background: rgba(255,255,255,.18); color: #fff; }
+
+    .more-wrap { position: relative; flex: 0 0 auto; }
+    .more-trigger {
+      border: 1px solid var(--border); background: #fff; color: var(--text);
+      padding: 10px 12px; border-radius: 999px; font: 600 13px/1 var(--font);
+      cursor: pointer; display: inline-flex; align-items: center; gap: 8px;
+      height: 38px; transition: border-color .15s, background .15s;
+    }
+    .more-trigger:hover { border-color: #c9ded6; background: #f7faf8; }
+    .more-trigger[aria-expanded="true"] { border-color: var(--green); background: #f2faf6; }
+    .more-trigger .chev {
+      width: 10px; height: 10px; border-right: 2px solid currentColor;
+      border-bottom: 2px solid currentColor; transform: rotate(45deg);
+      transition: transform .18s; margin-left: 2px;
+    }
+    .more-trigger[aria-expanded="true"] .chev { transform: rotate(-135deg); }
+    .more-count {
+      background: var(--lightgreen); color: var(--green); font-size: 11px;
+      font-weight: 800; padding: 2px 7px; border-radius: 999px;
+    }
+    .more-panel {
+      position: absolute; right: 0; top: calc(100% + 8px); width: 280px;
+      background: #fff; border-radius: 14px; border: 1px solid var(--border);
+      box-shadow: 0 24px 50px -20px rgba(0,44,47,.25), 0 4px 12px rgba(0,44,47,.06);
+      padding: 10px; z-index: 20; display: none;
+    }
+    .more-panel.open { display: block; }
+    .more-search {
+      width: 100%; border: 1px solid var(--border); background: var(--gray-bg);
+      border-radius: 10px; padding: 9px 12px; font: 500 13px var(--font);
+      color: var(--text); outline: none; margin-bottom: 8px;
+    }
+    .more-search:focus { border-color: var(--green); background: #fff; }
+    .more-list { max-height: 240px; overflow-y: auto; margin: 0; padding: 0; list-style: none; }
+    .more-list::-webkit-scrollbar { width: 8px; }
+    .more-list::-webkit-scrollbar-thumb { background: #d6e4de; border-radius: 999px; }
+    .more-item {
+      display: flex; align-items: center; gap: 10px; padding: 9px 10px;
+      border-radius: 10px; cursor: pointer; font: 600 13px var(--font);
+      color: var(--text); transition: background .12s;
+    }
+    .more-item:hover { background: var(--gray-bg); }
+    .more-item.active { background: var(--lightgreen); color: var(--green); }
+    .more-item .ticker { flex: 1; }
+    .more-item .name { color: var(--muted); font-weight: 500; font-size: 12px; }
+    .more-item.active .name { color: var(--green); opacity: .8; }
+    .more-empty { padding: 18px 10px; text-align: center; color: var(--muted); font-size: 13px; }
+
     /* ══ WAITLIST MODAL ══ */
     .wl-overlay {
       position: fixed; inset: 0; z-index: 9999;
@@ -404,6 +483,10 @@
       .calculator__card { padding: 12px 14px; }
       .calculator__card .data { font-size: 16px; }
       .result-number { font-size: 16px; }
+      .quick-chips button { padding: 8px 6px; font-size: 12px; gap: 4px; }
+      .coin-glyph { width: 16px; height: 16px; font-size: 9px; }
+      .more-trigger { padding: 8px 10px; font-size: 12px; height: 34px; }
+      .more-panel { width: 240px; }
       .result-percent { font-size: 12px; padding: 2px 6px; margin-left: 4px; }
       .steps-grid { grid-template-columns: 1fr; gap: 14px; }
       .section-subtitle { font-size: 19px; }
@@ -542,6 +625,24 @@
           </div>
         </div>
 
+        <div class="token-section-label" data-i18n="calc_token_label">Elegí el token de garantía</div>
+        <div class="currency-row">
+          <div class="quick-chips" id="quickChips" role="tablist" aria-label="Moneda de garantía"></div>
+          <div class="more-wrap">
+            <button type="button" class="more-trigger" id="moreTrigger" aria-haspopup="listbox" aria-expanded="false">
+              <span data-i18n="calc_more_btn">Más</span>
+              <span class="more-count" id="moreCount">0</span>
+              <span class="chev" aria-hidden="true"></span>
+            </button>
+            <div class="more-panel" id="morePanel" role="listbox">
+              <input type="text" class="more-search" id="moreSearch" data-i18n-ph="calc_search_placeholder" placeholder="Buscar moneda…" />
+              <ul class="more-list" id="moreList"></ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="collateral-hint"><span data-i18n="calc_collateral_prefix">Necesitás aportar</span> <strong id="collateralAmount">—</strong></div>
+
         <div class="calculator__card">
           <div class="title" data-i18n="calc_term_label">Plazo del crédito</div>
           <div class="data" id="termDisplay">1 día</div>
@@ -582,6 +683,7 @@
           <span data-i18n="calc_btn">Obtener pesos</span>
         </button>
         <div class="calc-note" data-i18n="calc_note">* Cálculo aproximado de garantía USDT</div>
+        <!-- Note: calc_note text is dynamically updated by updateCalc() with the selected currency -->
       </div>
     </div>
   </div>
@@ -1018,7 +1120,12 @@ window.I18N = {
     calc_hint_prefix:   'Si devolvés antes del',
     calc_hint_suffix:   '',
     calc_btn:           'Obtener pesos',
-    calc_note:          '* Cálculo aproximado de garantía USDT',
+    calc_note:          '* Cálculo aproximado de garantía',
+    calc_token_label:   'Elegí el token de garantía',
+    calc_more_btn:      'Más',
+    calc_search_placeholder: 'Buscar moneda…',
+    calc_search_empty:  'No se encontró',
+    calc_collateral_prefix: 'Necesitás aportar',
 
     /* Advantages */
     adv_title:     'Ventajas de FinFresh',
@@ -1149,7 +1256,12 @@ window.I18N = {
     calc_hint_prefix:   'If you repay by',
     calc_hint_suffix:   '',
     calc_btn:           'Get pesos',
-    calc_note:          '* Approximate USDT collateral calculation',
+    calc_note:          '* Approximate collateral calculation',
+    calc_token_label:   'Choose collateral token',
+    calc_more_btn:      'More',
+    calc_search_placeholder: 'Search currency…',
+    calc_search_empty:  'Nothing found',
+    calc_collateral_prefix: 'You need to deposit',
 
     /* Advantages */
     adv_title:     'Why FinFresh',
@@ -1292,6 +1404,7 @@ window.setLang = function(lang) {
 
   /* 7. Refresh calculator if present */
   if (typeof updateCalc === 'function') updateCalc();
+  if (typeof renderMoreList === 'function') renderMoreList('');
 };
 
 /* ─── Auto-init on DOMContentLoaded ─── */
@@ -1336,7 +1449,23 @@ window.setLang = function(lang) {
   }
 
   /* ── Calculator ── */
-  var USDT_RATE = 1400; // 1 USDT ≈ 1 400 ARS (abril 2026)
+  var CURRENCIES = [
+    { code:'USDT', name:'Tether',   rate:1400,       decimals:2, glyph:'₮', quick:true  },
+    { code:'BTC',  name:'Bitcoin',  rate:95000000,    decimals:8, glyph:'₿', quick:true  },
+    { code:'ETH',  name:'Ethereum', rate:3600000,     decimals:6, glyph:'◆', quick:true  },
+    { code:'TON',  name:'Toncoin',  rate:4200,        decimals:4, glyph:'◇', quick:false },
+    { code:'USDC', name:'USD Coin', rate:1400,        decimals:2, glyph:'◉', quick:false },
+    { code:'SOL',  name:'Solana',   rate:250000,      decimals:4, glyph:'◐', quick:false },
+    { code:'BNB',  name:'BNB',      rate:900000,      decimals:4, glyph:'◈', quick:false },
+    { code:'XRP',  name:'XRP',      rate:3300,        decimals:2, glyph:'✕', quick:false },
+    { code:'DAI',  name:'Dai',      rate:1400,        decimals:2, glyph:'◑', quick:false },
+    { code:'TRX',  name:'TRON',     rate:380,         decimals:2, glyph:'◭', quick:false }
+  ];
+  var BY_CODE = {};
+  CURRENCIES.forEach(function(c){ BY_CODE[c.code] = c; });
+  var COLLATERAL_RATIO = 1.43;
+  var MAIN_TOKENS = ['USDT', 'BTC', 'ETH'];
+  var calcState = { currency: 'USDT' };
 
   function fmt(n) {
     var locale = (window.currentLang === 'en') ? 'en-US' : 'es-AR';
@@ -1357,6 +1486,94 @@ window.setLang = function(lang) {
     return t === 1 ? '1 día' : t + ' días';
   }
 
+  function fmtCrypto(ars, code) {
+    var cur = BY_CODE[code];
+    var units = (ars * COLLATERAL_RATIO) / cur.rate;
+    var s = units.toFixed(cur.decimals);
+    if (['USDT','USDC','DAI'].indexOf(code) === -1) s = s.replace(/0+$/, '').replace(/\.$/, '');
+    return s + ' ' + code;
+  }
+
+  /* ── Token selector ── */
+  var quickChipsEl = document.getElementById('quickChips');
+  var moreListEl = document.getElementById('moreList');
+  var moreCountEl = document.getElementById('moreCount');
+  var morePanelEl = document.getElementById('morePanel');
+  var moreTriggerEl = document.getElementById('moreTrigger');
+  var moreSearchEl = document.getElementById('moreSearch');
+
+  function renderQuickChips() {
+    var selected = BY_CODE[calcState.currency];
+    var others = MAIN_TOKENS.filter(function(code){ return code !== calcState.currency; })
+      .map(function(code){ return BY_CODE[code]; }).slice(0, 2);
+    var chips = [selected].concat(others);
+    quickChipsEl.innerHTML = chips.map(function(c, i) {
+      var cls = i === 0 ? 'selected-slot' : '';
+      return '<button type="button" data-cur="' + c.code + '" class="' + cls + '"' +
+        (i === 0 ? ' aria-pressed="true"' : '') + '>' +
+        '<span class="coin-glyph">' + c.glyph + '</span> ' + c.code + '</button>';
+    }).join('');
+    quickChipsEl.querySelectorAll('button').forEach(function(b) {
+      b.addEventListener('click', function() { selectCurrency(b.dataset.cur); });
+    });
+  }
+
+  function renderMoreList(q) {
+    q = (q || '').trim().toLowerCase();
+    var L = window.I18N[window.currentLang] || window.I18N.es;
+    var items = CURRENCIES.filter(function(c) {
+      return !q || c.code.toLowerCase().indexOf(q) !== -1 || c.name.toLowerCase().indexOf(q) !== -1;
+    });
+    moreCountEl.textContent = CURRENCIES.length;
+    if (items.length) {
+      moreListEl.innerHTML = items.map(function(c) {
+        return '<li class="more-item ' + (c.code === calcState.currency ? 'active' : '') +
+          '" data-cur="' + c.code + '">' +
+          '<span class="coin-glyph">' + c.glyph + '</span>' +
+          '<span class="ticker">' + c.code + '</span>' +
+          '<span class="name">' + c.name + '</span></li>';
+      }).join('');
+    } else {
+      moreListEl.innerHTML = '<li class="more-empty">' + (L.calc_search_empty || 'No se encontró') + '</li>';
+    }
+    moreListEl.querySelectorAll('.more-item').forEach(function(li) {
+      li.addEventListener('click', function() { selectCurrency(li.dataset.cur); closeMore(); });
+    });
+  }
+
+  function selectCurrency(code) {
+    if (!BY_CODE[code]) return;
+    calcState.currency = code;
+    renderQuickChips();
+    moreListEl.querySelectorAll('.more-item').forEach(function(li) {
+      li.classList.toggle('active', li.dataset.cur === code);
+    });
+    updateCalc();
+  }
+
+  function openMore() {
+    morePanelEl.classList.add('open');
+    moreTriggerEl.setAttribute('aria-expanded', 'true');
+    moreSearchEl.value = '';
+    renderMoreList('');
+    setTimeout(function(){ moreSearchEl.focus(); }, 30);
+  }
+  function closeMore() {
+    morePanelEl.classList.remove('open');
+    moreTriggerEl.setAttribute('aria-expanded', 'false');
+  }
+  moreTriggerEl.addEventListener('click', function() {
+    morePanelEl.classList.contains('open') ? closeMore() : openMore();
+  });
+  moreSearchEl.addEventListener('input', function(e) { renderMoreList(e.target.value); });
+  document.addEventListener('click', function(e) {
+    if (!morePanelEl.contains(e.target) && !moreTriggerEl.contains(e.target)) closeMore();
+  });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeMore(); });
+
+  renderQuickChips();
+  renderMoreList();
+
   function updateCalc() {
     var aSlider = document.getElementById('amountSlider');
     var tSlider = document.getElementById('termSlider');
@@ -1370,14 +1587,22 @@ window.setLang = function(lang) {
     tSlider.style.setProperty('--val', ((term - tMin)   / (tMax - tMin) * 100).toFixed(1) + '%');
 
     document.getElementById('amountDisplay').textContent = fmt(amount);
-    document.getElementById('usdtDisplay').textContent   = (amount / USDT_RATE * 1.1).toFixed(2) + ' USDT*';
+    document.getElementById('usdtDisplay').textContent   = fmtCrypto(amount, calcState.currency) + '*';
     document.getElementById('termDisplay').textContent   = termLabel(term);
+
+    /* Collateral hint */
+    document.getElementById('collateralAmount').textContent = fmtCrypto(amount, calcState.currency);
 
     var due = fmtDate(term);
     document.getElementById('takeAmount').textContent  = fmt(amount);
     document.getElementById('dueDate').textContent     = due;
     document.getElementById('returnAmount').innerHTML  = fmt(amount) + ' <span class="result-percent">0%</span>';
     document.getElementById('hintDate').textContent    = due;
+
+    /* Update footnote with current currency */
+    var L = window.I18N[window.currentLang] || window.I18N.es;
+    var noteEl = document.querySelector('[data-i18n="calc_note"]');
+    if (noteEl) noteEl.textContent = (L.calc_note || '* Cálculo aproximado de garantía') + ' ' + calcState.currency;
   }
 
   /* ── Contact form ── */
