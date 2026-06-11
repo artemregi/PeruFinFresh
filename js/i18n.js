@@ -99,7 +99,7 @@ window.I18N = {
     contact_sent:     'Enviado ✓',
 
     /* Footer */
-    footer_about:        'FinFresh — servicio rápido de préstamos online 24/7. El uso de moneda digital como garantía permite obtener fondos rápidamente sin perder tiempo.',
+    footer_about:        'servicio rápido de préstamos online 24/7. El uso de moneda digital como garantía permite obtener fondos rápidamente sin perder tiempo.',
     footer_rate:         'Rango TCEA 0–292% anual',
     footer_links_title:  'Enlaces rápidos',
     footer_contact_title:'Contacto',
@@ -222,7 +222,7 @@ window.I18N = {
     contact_sent:     'Sent ✓',
 
     /* Footer */
-    footer_about:        'FinFresh — fast online loan service 24/7. Using digital currency as collateral lets you get funds quickly without wasting time.',
+    footer_about:        'fast online loan service 24/7. Using digital currency as collateral lets you get funds quickly without wasting time.',
     footer_rate:         'TCEA range 0–292% per year',
     footer_links_title:  'Quick links',
     footer_contact_title:'Contact',
