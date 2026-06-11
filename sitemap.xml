@@ -111,18 +111,18 @@
   </url>
 
   <url>
-    <loc>https://www.ff-lat.online/argentina</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.ff-lat.online/argentina"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ff-lat.online/argentina"/>
+    <loc>https://www.ff-lat.online/peru</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.ff-lat.online/peru"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ff-lat.online/peru"/>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <lastmod>2026-05-14</lastmod>
   </url>
 
   <url>
-    <loc>https://www.ff-lat.online/prestamos-argentina</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.ff-lat.online/prestamos-argentina"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ff-lat.online/prestamos-argentina"/>
+    <loc>https://www.ff-lat.online/prestamos-peru</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.ff-lat.online/prestamos-peru"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ff-lat.online/prestamos-peru"/>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <lastmod>2026-05-14</lastmod>
