@@ -104,8 +104,8 @@ window.I18N = {
     footer_links_title:  'Enlaces rápidos',
     footer_contact_title:'Contacto',
     footer_legal1:       'Nombre completo: FinFresh LLC',
-    footer_legal2:       'RUC: 20632426904',
-    footer_legal3:       'Domicilio legal: Av. Javier Prado Este 4600, Santiago de Surco, Lima',
+    footer_legal2:       'RUC: 20610785431',
+    footer_legal3:       'Domicilio legal: Av. Talara 393, Jesús María, Lima, Perú',
     footer_legal4:       'FinFresh LLC no acepta depósitos de personas físicas.',
 
     /* Waitlist modal */
@@ -227,8 +227,8 @@ window.I18N = {
     footer_links_title:  'Quick links',
     footer_contact_title:'Contact',
     footer_legal1:       'Full name: FinFresh LLC',
-    footer_legal2:       'RUC: 20632426904',
-    footer_legal3:       'Registered address: Av. Javier Prado Este 4600, Santiago de Surco, Lima',
+    footer_legal2:       'RUC: 20610785431',
+    footer_legal3:       'Registered address: Av. Talara 393, Jesús María, Lima, Perú',
     footer_legal4:       'FinFresh LLC does not accept deposits from individuals.',
 
     /* Waitlist modal */
