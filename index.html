@@ -994,13 +994,24 @@
 ¡Te avisamos primero!</div>
     <div class="wl-error" id="wlError" data-i18n="wl_error">Algo salió mal. Intenta de nuevo o escribe a info@ff-lat.online</div>
 
-    <form class="wl-form" id="wlForm" onsubmit="handleWaitlistSubmit(event)" novalidate>
+    <form class="wl-form" id="wlForm" onsubmit="handleWaitlistSubmit(event)" novalidate style="flex-direction:column;">
+      <input type="text" class="wl-email" id="wlName"
+             placeholder="Tu nombre completo"
+             required autocomplete="name" style="margin-bottom:8px;" />
       <input type="email" class="wl-email" id="wlEmail"
              data-i18n-ph="wl_email_ph"
              placeholder="Tu dirección de e-mail"
-             required autocomplete="email" />
-      <button type="submit" class="wl-btn" id="wlBtn" data-goal="waitlist_submit" onclick="gtag('event','click',{event_category:'button',event_label:'waitlist_submit'});">
-        <span data-i18n="wl_btn">Notificarme 🚀</span>
+             required autocomplete="email" style="margin-bottom:8px;" />
+      <div style="display:flex;gap:8px;margin-bottom:8px;">
+        <input type="text" class="wl-email" id="wlAmount"
+               placeholder="Monto del préstamo (S/)"
+               required style="flex:1;" />
+        <input type="text" class="wl-email" id="wlTerm"
+               placeholder="Plazo (días)"
+               required style="flex:0 0 120px;" />
+      </div>
+      <button type="submit" class="wl-btn" id="wlBtn" data-goal="waitlist_submit" style="width:100%;" onclick="gtag('event','click',{event_category:'button',event_label:'waitlist_submit'});">
+        <span data-i18n="wl_btn">Solicitar préstamo 🚀</span>
       </button>
     </form>
 
@@ -1216,7 +1227,7 @@ window.I18N = {
     wl_success:     '🎉 ¡Genial! Estás en la lista de espera.\n¡Te avisamos primero!',
     wl_error:       'Algo salió mal. Intenta de nuevo o escribe a info@ff-lat.online',
     wl_email_ph:    'Tu dirección de e-mail',
-    wl_btn:         'Notificarme 🚀',
+    wl_btn:         'Solicitar préstamo 🚀',
     wl_privacy:     '🔒 Tu e-mail está seguro. Sin spam.',
     wl_close_aria:  'Cerrar',
 
@@ -1352,7 +1363,7 @@ window.I18N = {
     wl_success:     '🎉 Great! You are on the waiting list.\nWe will reach out first!',
     wl_error:       'Something went wrong. Try again or write to info@ff-lat.online',
     wl_email_ph:    'Your e-mail address',
-    wl_btn:         'Notify me 🚀',
+    wl_btn:         'Apply for loan 🚀',
     wl_privacy:     '🔒 Your e-mail is safe. No spam.',
     wl_close_aria:  'Close',
 
@@ -1651,8 +1662,10 @@ window.setLang = function(lang) {
   function openWaitlistModal() {
     document.getElementById('waitlistModal').classList.add('active');
     document.body.style.overflow = 'hidden';
+    document.getElementById('wlAmount').value = '';
+    document.getElementById('wlTerm').value = '';
     gtag('event','modal_open',{event_category:'engagement',event_label:'waitlist_modal'});
-    setTimeout(function() { var i = document.getElementById('wlEmail'); if (i) i.focus(); }, 350);
+    setTimeout(function() { var i = document.getElementById('wlName'); if (i) i.focus(); }, 350);
   }
 
   function closeWaitlistModal() {
@@ -1667,11 +1680,14 @@ window.setLang = function(lang) {
 
   function handleWaitlistSubmit(e) {
     e.preventDefault();
-    var email = document.getElementById('wlEmail').value.trim();
-    var btn   = document.getElementById('wlBtn');
-    var form  = document.getElementById('wlForm');
-    var ok    = document.getElementById('wlSuccess');
-    var err   = document.getElementById('wlError');
+    var name   = document.getElementById('wlName').value.trim();
+    var email  = document.getElementById('wlEmail').value.trim();
+    var amount = document.getElementById('wlAmount').value.trim();
+    var term   = document.getElementById('wlTerm').value.trim();
+    var btn    = document.getElementById('wlBtn');
+    var form   = document.getElementById('wlForm');
+    var ok     = document.getElementById('wlSuccess');
+    var err    = document.getElementById('wlError');
 
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       document.getElementById('wlEmail').style.borderColor = '#ef4444';
@@ -1689,7 +1705,7 @@ window.setLang = function(lang) {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         email: email,
-        source: 'FinFresh PE – ' + (L.calc_btn || 'Obtener soles'),
+        source: 'FinFresh PE – ' + name + ' | Monto: S/ ' + amount + ' | Plazo: ' + term + ' días',
         timestamp: new Date().toISOString(),
         page: window.location.href,
         lang: window.currentLang
@@ -1704,7 +1720,7 @@ window.setLang = function(lang) {
     .catch(function() {
       err.classList.add('show');
       gtag('event','form_error',{event_category:'form',event_label:'waitlist_error'});
-      btn.querySelector('[data-i18n]').textContent = L.wl_btn || 'Notificarme 🚀';
+      btn.querySelector('[data-i18n]').textContent = L.wl_btn || 'Solicitar préstamo 🚀';
       btn.disabled = false;
     });
   }
