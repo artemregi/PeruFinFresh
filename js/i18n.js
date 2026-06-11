@@ -26,8 +26,8 @@ window.I18N = {
     calc_title:         '¿Cuánto necesitas?',
     calc_amount_label:  'Monto del préstamo',
     calc_term_label:    'Plazo del crédito',
-    calc_min_amount:    'S/ 50.000',
-    calc_max_amount:    'S/ 5.000.000',
+    calc_min_amount:    'S/ 50,000',
+    calc_max_amount:    'S/ 5,000,000',
     calc_min_term:      '1 día',
     calc_max_term:      '90 días',
     calc_take_label:    'Recibes:',
@@ -58,7 +58,7 @@ window.I18N = {
     adv8_text:     'Puedes solicitar el préstamo desde cualquier país con internet — los soles llegan a tu tarjeta bancaria.',
 
     /* How it works */
-    hiw_title:     'Cómo funciona?',
+    hiw_title:     '¿Cómo funciona?',
     step1_title:   'Completa la solicitud',
     step1_text:    'Regístrate y completa un breve formulario online. Solo los datos necesarios — sin documentación adicional.',
     step2_title:   'Transfiere la garantía',
@@ -70,23 +70,23 @@ window.I18N = {
 
     /* FAQ */
     faq_title:  'Preguntas frecuentes',
-    faq1_q:     'Qué es un préstamo con garantía en criptomonedas?',
+    faq1_q:     '¿Qué es un préstamo con garantía en criptomonedas?',
     faq1_a:     'Es un préstamo en soles donde tus activos digitales (ej. USDT) funcionan como garantía. La criptomoneda se bloquea durante la vigencia del contrato y no se vende sin los motivos previstos en la oferta pública.',
-    faq2_q:     'Cuál es el monto mínimo del préstamo?',
-    faq2_a:     'El monto mínimo es de S/ 50.000. El rango actualizado siempre se muestra en la calculadora de la página principal.',
-    faq3_q:     'Qué tan rápido se entrega el préstamo?',
+    faq2_q:     '¿Cuál es el monto mínimo del préstamo?',
+    faq2_a:     'El monto mínimo es de S/ 50,000. El rango actualizado siempre se muestra en la calculadora de la página principal.',
+    faq3_q:     '¿Qué tan rápido se entrega el préstamo?',
     faq3_a:     'Con los datos correctos y la garantía depositada, el préstamo suele entregarse en 5–10 minutos: tras la activación, los fondos se transfieren a tu tarjeta bancaria.',
-    faq4_q:     'Es necesario vender las criptomonedas?',
+    faq4_q:     '¿Es necesario vender las criptomonedas?',
     faq4_a:     'No. Los activos digitales funcionan como garantía y se bloquean durante la vigencia del contrato. Si cumples con las obligaciones, la criptomoneda no se vende y regresa a tu disposición.',
-    faq5_q:     'Se puede cancelar el préstamo anticipadamente?',
+    faq5_q:     '¿Se puede cancelar el préstamo anticipadamente?',
     faq5_a:     'Sí. Puedes cancelar el préstamo en cualquier momento. En ese caso, el cobro de comisiones/intereses se detiene según las condiciones de la oferta pública, y la cripto de garantía queda desbloqueada.',
-    faq6_q:     'Se verifica el historial crediticio?',
+    faq6_q:     '¿Se verifica el historial crediticio?',
     faq6_a:     'La verificación del historial crediticio puede realizarse dentro de los límites previstos por la ley y la oferta pública. No se requieren constancias de ingresos en papel — la decisión se toma online.',
-    faq7_q:     'Cuáles son los riesgos?',
+    faq7_q:     '¿Cuáles son los riesgos?',
     faq7_a:     'El riesgo principal está relacionado con la volatilidad del precio de los activos digitales. Si el valor de la garantía cae significativamente, las reglas del servicio pueden requerir garantía adicional o el pago parcial/total del préstamo. Las condiciones detalladas se describen en la oferta pública.',
-    faq8_q:     'Se puede solicitar desde otro país?',
+    faq8_q:     '¿Se puede solicitar desde otro país?',
     faq8_a:     'Sí. El servicio funciona online y puedes estar en cualquier ciudad o país. El estado de residencia no importa — solo necesitas pasar la identificación remota y tener una tarjeta bancaria para recibir los soles.',
-    faq9_q:     'Qué ocurre después de pagar el préstamo?',
+    faq9_q:     '¿Qué ocurre después de pagar el préstamo?',
     faq9_a:     'Tras el pago total del préstamo, la criptomoneda de garantía queda desbloqueada y vuelve a estar disponible en tu billetera. Lo que hagas con los activos después depende de ti.',
 
     /* Contact section */
@@ -100,12 +100,12 @@ window.I18N = {
 
     /* Footer */
     footer_about:        'FinFresh — servicio rápido de préstamos online 24/7. El uso de moneda digital como garantía permite obtener fondos rápidamente sin perder tiempo.',
-    footer_rate:         'Rango TAEG 0–292% anual',
+    footer_rate:         'Rango TCEA 0–292% anual',
     footer_links_title:  'Enlaces rápidos',
     footer_contact_title:'Contacto',
-    footer_legal1:       'Nombre completo: FinFresh LLC — Organización de microfinanzas',
-    footer_legal2:       'RUC: 20632426904 | Reg. SBS: XXXXXXXX',
-    footer_legal3:       'Domicilio legal: Almaty, Dostyq Ave. 1, 050000',
+    footer_legal1:       'Nombre completo: FinFresh LLC',
+    footer_legal2:       'RUC: 20632426904',
+    footer_legal3:       'Domicilio legal: Av. Javier Prado Este 4600, Santiago de Surco, Lima',
     footer_legal4:       'FinFresh LLC no acepta depósitos de personas físicas.',
 
     /* Waitlist modal */
@@ -223,12 +223,12 @@ window.I18N = {
 
     /* Footer */
     footer_about:        'FinFresh — fast online loan service 24/7. Using digital currency as collateral lets you get funds quickly without wasting time.',
-    footer_rate:         'APR range 0–292% per year',
+    footer_rate:         'TCEA range 0–292% per year',
     footer_links_title:  'Quick links',
     footer_contact_title:'Contact',
-    footer_legal1:       'Full name: FinFresh LLC — Microfinance organisation',
-    footer_legal2:       'RUC: 20632426904 | SBS Reg. No.: XXXXXXXX',
-    footer_legal3:       'Registered address: Almaty, Dostyq Ave. 1, 050000',
+    footer_legal1:       'Full name: FinFresh LLC',
+    footer_legal2:       'RUC: 20632426904',
+    footer_legal3:       'Registered address: Av. Javier Prado Este 4600, Santiago de Surco, Lima',
     footer_legal4:       'FinFresh LLC does not accept deposits from individuals.',
 
     /* Waitlist modal */
