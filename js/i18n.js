@@ -24,7 +24,7 @@ window.I18N = {
 
     /* Calculator */
     calc_title:         '¿Cuánto necesitas?',
-    calc_amount_label:  'Monto del préstamo, S/',
+    calc_amount_label:  'Monto del préstamo',
     calc_term_label:    'Plazo del crédito',
     calc_min_amount:    'S/ 50.000',
     calc_max_amount:    'S/ 5.000.000',
@@ -147,7 +147,7 @@ window.I18N = {
 
     /* Calculator */
     calc_title:         'How much do you need?',
-    calc_amount_label:  'Loan amount, S/',
+    calc_amount_label:  'Loan amount',
     calc_term_label:    'Loan term',
     calc_min_amount:    'S/ 50,000',
     calc_max_amount:    'S/ 5,000,000',

@@ -613,7 +613,7 @@
         <h4 data-i18n="calc_title">¿Cuánto necesitas?</h4>
 
         <div class="calculator__card">
-          <div class="title" data-i18n="calc_amount_label">Monto del préstamo, S/</div>
+          <div class="title" data-i18n="calc_amount_label">Monto del préstamo</div>
           <div class="data" id="amountDisplay">S/ 50.000</div>
           <div class="usdt" id="usdtDisplay">116.53 USDT*</div>
           <div class="range-wrap">
@@ -910,12 +910,12 @@
     <p style="max-width:600px; color:var(--muted); font-size:15px; margin-bottom:32px; line-height:1.7;" data-i18n="contact_desc">
       ¿Tienes alguna pregunta, encontraste un problema o quieres compartir una sugerencia? Escríbenos — responderemos lo antes posible.
     </p>
-    <form onsubmit="handleForm(event)" style="max-width:560px; display:flex; flex-direction:column; gap:16px;">
-      <input type="text" data-i18n-ph="contact_name" placeholder="Tu nombre" required
+    <form id="contactForm" onsubmit="handleForm(event)" style="max-width:560px; display:flex; flex-direction:column; gap:16px;">
+      <input type="text" id="contactName" data-i18n-ph="contact_name" placeholder="Tu nombre" required
              style="padding:14px 18px; border:1px solid var(--border); border-radius:10px; font-family:var(--font); font-size:14px; outline:none; width:100%;" />
-      <input type="email" data-i18n-ph="contact_email_ph" placeholder="Dirección de e-mail" required
+      <input type="email" id="contactEmail" data-i18n-ph="contact_email_ph" placeholder="Dirección de e-mail" required
              style="padding:14px 18px; border:1px solid var(--border); border-radius:10px; font-family:var(--font); font-size:14px; outline:none; width:100%;" />
-      <textarea rows="5" data-i18n-ph="contact_msg" placeholder="Describe tu problema o sugerencia..." required
+      <textarea rows="5" id="contactMsg" data-i18n-ph="contact_msg" placeholder="Describe tu problema o sugerencia..." required
                 style="padding:14px 18px; border:1px solid var(--border); border-radius:10px; font-family:var(--font); font-size:14px; outline:none; resize:vertical; width:100%;"></textarea>
       <button type="submit" class="btn-get" data-goal="contact_form_submit" style="width:auto; align-self:flex-start; padding:14px 40px;" onclick="gtag('event','click',{event_category:'button',event_label:'contact_form_submit'});">
         <span data-i18n="contact_btn">Enviar mensaje</span>
@@ -1108,7 +1108,7 @@ window.I18N = {
 
     /* Calculator */
     calc_title:         'Cuánto necesitas?',
-    calc_amount_label:  'Monto del préstamo, S/',
+    calc_amount_label:  'Monto del préstamo',
     calc_term_label:    'Plazo del crédito',
     calc_min_amount:    'S/ 50.000',
     calc_max_amount:    'S/ 5.000.000',
@@ -1244,7 +1244,7 @@ window.I18N = {
 
     /* Calculator */
     calc_title:         'How much do you need?',
-    calc_amount_label:  'Loan amount, S/',
+    calc_amount_label:  'Loan amount',
     calc_term_label:    'Loan term',
     calc_min_amount:    'S/ 50,000',
     calc_max_amount:    'S/ 5,000,000',
@@ -1608,12 +1608,39 @@ window.setLang = function(lang) {
   /* ── Contact form ── */
   function handleForm(e) {
     e.preventDefault();
-    gtag('event','contact_form_submit',{event_category:'form',event_label:'contact_form'});
-    var btn = e.target.querySelector('button');
-    var L = window.I18N[window.currentLang] || window.I18N.es;
-    btn.querySelector('[data-i18n]').textContent = L.contact_sent || 'Enviado ✓';
-    btn.style.background = '#026d60';
+    var name  = document.getElementById('contactName').value.trim();
+    var email = document.getElementById('contactEmail').value.trim();
+    var msg   = document.getElementById('contactMsg').value.trim();
+    var btn   = e.target.querySelector('button');
+    var L     = window.I18N[window.currentLang] || window.I18N.es;
+
+    btn.querySelector('[data-i18n]').textContent = (window.currentLang === 'en') ? 'Sending…' : 'Enviando…';
     btn.disabled = true;
+
+    fetch(WL_SCRIPT_URL, {
+      method: 'POST', mode: 'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        email: email,
+        source: 'FinFresh PE – Contacto: ' + name,
+        timestamp: new Date().toISOString(),
+        page: window.location.href + ' | Mensaje: ' + msg,
+        lang: window.currentLang
+      })
+    })
+    .then(function() {
+      gtag('event','contact_form_submit',{event_category:'form',event_label:'contact_form'});
+      if (typeof ym !== 'undefined') ym(108464041,'reachGoal','contact_form_submit');
+      btn.querySelector('[data-i18n]').textContent = L.contact_sent || 'Enviado ✓';
+      btn.style.background = '#026d60';
+      document.getElementById('contactName').disabled = true;
+      document.getElementById('contactEmail').disabled = true;
+      document.getElementById('contactMsg').disabled = true;
+    })
+    .catch(function() {
+      btn.querySelector('[data-i18n]').textContent = L.contact_btn || 'Enviar mensaje';
+      btn.disabled = false;
+    });
   }
 
   updateCalc();
