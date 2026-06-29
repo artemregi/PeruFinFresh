@@ -1013,14 +1013,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
              data-i18n-ph="wl_email_ph"
              placeholder="Tu dirección de e-mail"
              required autocomplete="email" style="margin-bottom:8px;" />
-      <div style="display:flex;gap:8px;margin-bottom:8px;min-width:0;">
-        <input type="text" class="wl-email" id="wlAmount"
-               placeholder="Monto (S/)"
-               required style="flex:1;min-width:0;" />
-        <input type="text" class="wl-email" id="wlTerm"
-               placeholder="Plazo (días)"
-               required style="flex:0 0 110px;min-width:0;" />
-      </div>
       <button type="submit" class="wl-btn" id="wlBtn" data-goal="waitlist_submit" style="width:100%;" onclick="gtag('event','click',{event_category:'button',event_label:'waitlist_submit'});">
         <span data-i18n="wl_btn">Solicitar préstamo 🚀</span>
       </button>
@@ -1673,8 +1665,6 @@ window.setLang = function(lang) {
   function openWaitlistModal() {
     document.getElementById('waitlistModal').classList.add('active');
     document.body.style.overflow = 'hidden';
-    document.getElementById('wlAmount').value = '';
-    document.getElementById('wlTerm').value = '';
     gtag('event','modal_open',{event_category:'engagement',event_label:'waitlist_modal'});
     setTimeout(function() { var i = document.getElementById('wlName'); if (i) i.focus(); }, 350);
   }
@@ -1693,8 +1683,8 @@ window.setLang = function(lang) {
     e.preventDefault();
     var name   = document.getElementById('wlName').value.trim();
     var email  = document.getElementById('wlEmail').value.trim();
-    var amount = document.getElementById('wlAmount').value.trim();
-    var term   = document.getElementById('wlTerm').value.trim();
+    var amount = (document.getElementById('amountSlider') ? document.getElementById('amountSlider').value : '');
+    var term   = (document.getElementById('termSlider') ? document.getElementById('termSlider').value : '');
     var btn    = document.getElementById('wlBtn');
     var form   = document.getElementById('wlForm');
     var ok     = document.getElementById('wlSuccess');
