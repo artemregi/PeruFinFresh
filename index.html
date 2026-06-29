@@ -625,13 +625,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <div class="calculator__card">
           <div class="title" data-i18n="calc_amount_label">Monto del préstamo</div>
-          <div class="data" id="amountDisplay">S/ 50,000</div>
-          <div class="usdt" id="usdtDisplay">116.53 USDT*</div>
+          <div class="data" id="amountDisplay">S/ 50</div>
+          <div class="usdt" id="usdtDisplay">16.91 USDT*</div>
           <div class="range-wrap">
-            <input type="range" id="amountSlider" min="50000" max="5000000" value="50000" step="50000" oninput="updateCalc();gtagCalcDebounce(this);" />
+            <input type="range" id="amountSlider" min="50" max="5000000" value="50" step="50" oninput="updateCalc();gtagCalcDebounce(this);" />
           </div>
           <div class="range-labels">
-            <span data-i18n="calc_min_amount">S/ 50,000</span>
+            <span data-i18n="calc_min_amount">S/ 50</span>
             <span data-i18n="calc_max_amount">S/ 5,000,000</span>
           </div>
         </div>
@@ -851,7 +851,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
  <span data-i18n="faq2_q">¿Cuál es el monto mínimo del préstamo?</span>
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
-        <div class="faq-item__answer" data-i18n="faq2_a">El monto mínimo es de S/ 50,000. El rango actualizado siempre se muestra en la calculadora de la página principal.</div>
+        <div class="faq-item__answer" data-i18n="faq2_a">El monto mínimo es de S/ 50. El rango actualizado siempre se muestra en la calculadora de la página principal.</div>
       </div>
 
       <div class="faq-item">
@@ -1132,7 +1132,7 @@ window.I18N = {
     calc_title:         '¿Cuánto necesitas?',
     calc_amount_label:  'Monto del préstamo',
     calc_term_label:    'Plazo del crédito',
-    calc_min_amount:    'S/ 50,000',
+    calc_min_amount:    'S/ 50',
     calc_max_amount:    'S/ 5,000,000',
     calc_min_term:      '1 día',
     calc_max_term:      '90 días',
@@ -1184,7 +1184,7 @@ window.I18N = {
     faq1_q:     '¿Qué es un préstamo con garantía en criptomonedas?',
     faq1_a:     'Es un préstamo en soles donde tus activos digitales (ej. USDT) funcionan como garantía. La criptomoneda se bloquea durante la vigencia del contrato y no se vende sin los motivos previstos en la oferta pública.',
     faq2_q:     '¿Cuál es el monto mínimo del préstamo?',
-    faq2_a:     'El monto mínimo es de S/ 50,000. El rango actualizado siempre se muestra en la calculadora de la página principal.',
+    faq2_a:     'El monto mínimo es de S/ 50. El rango actualizado siempre se muestra en la calculadora de la página principal.',
     faq3_q:     '¿Qué tan rápido se entrega el préstamo?',
     faq3_a:     'Con los datos correctos y la garantía depositada, el préstamo suele entregarse en 5–10 minutos: tras la activación, los fondos se transfieren a tu cuenta bancaria.',
     faq4_q:     '¿Es necesario vender las criptomonedas?',
@@ -1268,7 +1268,7 @@ window.I18N = {
     calc_title:         'How much do you need?',
     calc_amount_label:  'Loan amount',
     calc_term_label:    'Loan term',
-    calc_min_amount:    'S/ 50,000',
+    calc_min_amount:    'S/ 50',
     calc_max_amount:    'S/ 5,000,000',
     calc_min_term:      '1 day',
     calc_max_term:      '90 days',
@@ -1320,7 +1320,7 @@ window.I18N = {
     faq1_q:     'What is a crypto-backed loan?',
     faq1_a:     'It is a soles loan where your digital assets (e.g. USDT) serve as collateral. The crypto is locked for the duration of the agreement and not sold without grounds stipulated in the public offer.',
     faq2_q:     'What is the minimum loan amount?',
-    faq2_a:     'The minimum loan amount is S/ 50,000. The current range is always shown in the calculator on the main page.',
+    faq2_a:     'The minimum loan amount is S/ 50. The current range is always shown in the calculator on the main page.',
     faq3_q:     'How quickly is the loan issued?',
     faq3_a:     'With correct data and deposited collateral, the loan is usually issued within 5–10 minutes: after activation, funds are transferred to your bank account.',
     faq4_q:     'Do I need to sell my crypto?',
@@ -1485,7 +1485,7 @@ window.setLang = function(lang) {
   ];
   var BY_CODE = {};
   CURRENCIES.forEach(function(c){ BY_CODE[c.code] = c; });
-  var COLLATERAL_RATIO = 1.43;
+  var COLLATERAL_RATIO = 1.15;
   var MAIN_TOKENS = ['USDT', 'BTC', 'ETH'];
   var calcState = { currency: 'USDT' };
 
@@ -1603,7 +1603,7 @@ window.setLang = function(lang) {
 
     var amount = parseInt(aSlider.value);
     var term   = parseInt(tSlider.value);
-    var aMin = 50000, aMax = 5000000, tMin = 1, tMax = 90;
+    var aMin = 50, aMax = 5000000, tMin = 1, tMax = 90;
 
     aSlider.style.setProperty('--val', ((amount - aMin) / (aMax - aMin) * 100).toFixed(1) + '%');
     tSlider.style.setProperty('--val', ((term - tMin)   / (tMax - tMin) * 100).toFixed(1) + '%');
